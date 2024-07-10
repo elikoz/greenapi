@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Interface</title>
+<style>
+body {
+    background-color: #f0f0f0; /* Светло-серый фон */
+    color: #333; /* Цвет текста */
+}
+
+input, button {
+    background-color: #555; /* Темно-серый фон для полей ввода и кнопок */
+    color: #fff; /* Белый текст на темном фоне */
+    border: none; /* Убираем границы элементов */
+}
+
+/* Типографика */
+body {
+    font-family: Arial, sans-serif; /* Шрифт */
+    font-size: 16px; /* Размер текста */
+}
+
+h1 {
+    font-size: 24px; /* Увеличенный размер заголовка */
+}
+
+p {
+    line-height: 1.5; /* Межстрочный интервал */
+}
+
+/* Минимализм и простота */
+input, button {
+    padding: 10px 20px; /* Внутренние отступы для элементов */
+    border-radius: 5px; /* Скругленные углы */
+}
+
+/* Использование оттенков */
+input {
+    background-color: #333; /* Темно-серый фон для полей ввода */
+}
+
+button {
+    background-color: #222; /* Еще более темный фон для кнопок */
+}    
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+    .inputs {
+        margin-right: 20px;
+    }
+    .results {
+        border: 1px solid black;
+        padding: 10px;
+        width: 300px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="inputs">
+        <input type="text" placeholder="idInstance"><br><br>
+        <input type="text" placeholder="ApiTokenInstance"><br><br>
+        <button onclick="getSettings()">Get Settings</button><br><br>
+        <button onclick="getStateInstance()">Get State Instance</button><br><br>
+        <input type="text" placeholder="chatIdInput"><br><br>
+        <input type="text" placeholder="messageInput"><br><br>
+        <button onclick="sendMessage()">Send Message</button><br><br>
+        <input type="text" placeholder="chatId"><br><br>
+        <input type="text" placeholder="urlFileInput"><br><br>  
+        <input type="text" placeholder="fileName"><br><br>     
+        <button onclick="sendFileByUrl()">Send File</button>
+    </div>
+    <div class="results" id="resultsArea">
+        Results will be displayed here.
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
